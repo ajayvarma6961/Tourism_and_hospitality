@@ -1,8 +1,204 @@
-<html>
-    <head>
-        <title>My Website</title>
-    </head>
-    <body>
-        <h1>Welcome to My Website</h1>
-        <p>This is a simple HTML page.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tourism and Hospitality — Flights, Hotels & Holiday Packages</title>
+  <meta name="description" content="Discover your next adventure with Tourism and Hospitality. Book domestic & international flights, 5-star luxury hotels, all-inclusive tour packages, trains, buses, and cabs with best price guarantee.">
+  <meta name="theme-color" content="#0a192f">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Tourism and Hospitality — Travel & Hotel Booking Platform">
+  <meta property="og:description" content="Inspired by modern travel convenience. Book flights, luxury resorts, and bespoke holiday packages with instant confirmation.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Outfit (Display & Headings) and Plus Jakarta Sans (Body & Data) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css?v=2.3">
+</head>
+<body>
+  <!-- TOP ANNOUNCEMENT & UTILITY BAR -->
+  <div class="top-announcement-bar">
+    <div class="bar-container">
+      <div class="bar-left">
+        <span class="bar-badge">OFFER</span>
+        <span>🔥 Festive Travel Sale: Flat 20% OFF with code <strong>WANDER20</strong></span>
+      </div>
+      <div class="bar-right">
+        <a href="#/support" class="bar-link">24/7 Helpline: 1800 200 4567</a>
+        <span class="bar-divider">•</span>
+        <div class="currency-selector-wrap">
+          <label for="currency-select" class="sr-only">Currency</label>
+          <select id="currency-select" onchange="window.state.setCurrency(this.value)">
+            <option value="INR" selected>INR (₹)</option>
+            <option value="USD">USD ($)</option>
+            <option value="EUR">EUR (€)</option>
+          </select>
+        </div>
+        <span class="bar-divider">•</span>
+        <a href="#/owner" class="bar-link partner-link">List Your Property</a>
+        <span class="bar-divider">•</span>
+        <a href="#/admin" class="bar-link admin-link">Admin Portal</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN NAVIGATION BAR (MakeMyTrip Inspired & Redesigned) -->
+  <header class="main-site-header">
+    <div class="header-nav-container">
+      <!-- LOGO -->
+      <a href="#/" class="site-brand-logo">
+        <div class="logo-icon-wrap">
+          <span class="logo-plane">✈️</span>
+        </div>
+        <div class="logo-text-col">
+          <span class="logo-main">TOURISM &amp; HOSPITALITY</span>
+          <span class="logo-sub">EXPLORE &bull; STAY &bull; TRAVEL</span>
+        </div>
+      </a>
+
+      <!-- PRIMARY SERVICE NAVIGATION -->
+      <nav class="primary-nav-links" id="primary-nav">
+        <a href="#/flights" class="wy-nav-item" data-path="/flights">
+          <span class="nav-icon">✈️</span>
+          <span class="nav-label">Flights</span>
+        </a>
+        <a href="#/hotels" class="wy-nav-item" data-path="/hotels">
+          <span class="nav-icon">🏨</span>
+          <span class="nav-label">Hotels</span>
+        </a>
+        <a href="#/packages" class="wy-nav-item" data-path="/packages">
+          <span class="nav-icon">🌴</span>
+          <span class="nav-label">Holidays</span>
+        </a>
+        <a href="#/explore" class="wy-nav-item" data-path="/explore">
+          <span class="nav-icon">🧭</span>
+          <span class="nav-label">Destinations</span>
+        </a>
+        <a href="#/services?type=train" class="wy-nav-item" data-path="/services">
+          <span class="nav-icon">🚆</span>
+          <span class="nav-label">Trains &amp; Cabs</span>
+        </a>
+        <a href="#/offers" class="wy-nav-item" data-path="/offers">
+          <span class="nav-icon">🏷️</span>
+          <span class="nav-label">Offers</span>
+        </a>
+      </nav>
+
+      <!-- USER ACTIONS & ACCOUNT MENU -->
+      <div class="header-user-actions" id="user-actions-area">
+        <!-- Rendered dynamically by app.js based on auth state -->
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN SPA ROUTED CONTENT CONTAINER -->
+  <main id="main-content" class="spa-main-view">
+    <div class="wy-loading-view">
+      <div class="wy-spinner"></div>
+      <p>Initializing your travel experience...</p>
+    </div>
+  </main>
+
+  <!-- PROFESSIONAL SITE FOOTER -->
+  <footer class="site-main-footer">
+    <div class="footer-container">
+      <div class="footer-grid-top">
+        <div class="footer-col-brand">
+          <div class="footer-brand-logo">
+            <span class="logo-plane">✈️</span>
+            <strong>TOURISM &amp; HOSPITALITY</strong>
+          </div>
+          <p class="brand-bio">
+            India's most sophisticated and customer-centric tourism and hospitality booking platform. Redefining how travelers discover flights, heritage palaces, luxury resorts, and customized holiday itineraries.
+          </p>
+          <div class="compliance-badges">
+            <span class="comp-badge">🔒 256-Bit SSL Encrypted</span>
+            <span class="comp-badge">🛡️ IATA Accredited</span>
+            <span class="comp-badge">🚆 IRCTC Certified Partner</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Popular Domestic Flights</h4>
+          <ul>
+            <li><a href="#/flights?from=Delhi&to=Goa">Delhi to Goa Flights</a></li>
+            <li><a href="#/flights?from=Mumbai&to=Goa">Mumbai to Goa Flights</a></li>
+            <li><a href="#/flights?from=Bangalore&to=Delhi">Bangalore to Delhi Flights</a></li>
+            <li><a href="#/flights?from=Delhi&to=Srinagar">Delhi to Srinagar Flights</a></li>
+            <li><a href="#/flights?from=Hyderabad&to=Bangalore">Hyderabad to Bangalore Flights</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Luxury Stays &amp; Destinations</h4>
+          <ul>
+            <li><a href="#/hotel/hotel-taj-lake-palace">Taj Lake Palace Udaipur</a></li>
+            <li><a href="#/hotel/hotel-alila-diwa-goa">Alila Diwa Luxury Resort Goa</a></li>
+            <li><a href="#/hotel/hotel-khyber-gulmarg">The Khyber Resort Gulmarg</a></li>
+            <li><a href="#/hotel/hotel-kumarakom-lake-resort">Kumarakom Lake Resort Kerala</a></li>
+            <li><a href="#/explore">Explore All 50+ Destinations</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Partner &amp; Company</h4>
+          <ul>
+            <li><a href="#/owner">Hotel Owner Portal</a></li>
+            <li><a href="#/admin">Admin Control Panel</a></li>
+            <li><a href="#/my-bookings">Manage Bookings &amp; E-Tickets</a></li>
+            <li><a href="#/offers">Travel Deals &amp; Coupons</a></li>
+            <li><a href="#/support">24/7 Concierge &amp; FAQs</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p>&copy; 2026 Tourism and Hospitality Pvt Ltd. All rights reserved. Designed with premium travel aesthetics.</p>
+        <div class="footer-links-inline">
+          <a href="#/support">Privacy Policy</a>
+          <span>&bull;</span>
+          <a href="#/support">Terms of Service</a>
+          <span>&bull;</span>
+          <a href="#/support">Guest Safety</a>
+          <span>&bull;</span>
+          <a href="#/support">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODALS AND TOAST CONTAINERS -->
+  <div id="modal-root"></div>
+  <div id="toast-root"></div>
+
+  <!-- APPLICATION JAVASCRIPT MODULES IN DEPENDENCY ORDER (WITH CACHE-BUSTING) -->
+  <script src="js/db.js?v=2.3"></script>
+  <script src="js/state.js?v=2.3"></script>
+  <script src="js/router.js?v=2.3"></script>
+  
+  <!-- SPA VIEWS -->
+  <script src="views/home.js?v=2.3"></script>
+  <script src="views/flights.js?v=2.3"></script>
+  <script src="views/hotels.js?v=2.3"></script>
+  <script src="views/hotel-details.js?v=2.3"></script>
+  <script src="views/packages.js?v=2.3"></script>
+  <script src="views/explore.js?v=2.3"></script>
+  <script src="views/destination-details.js?v=2.3"></script>
+  <script src="views/checkout.js?v=2.3"></script>
+  <script src="views/auth.js?v=2.3"></script>
+  <script src="views/user-dashboard.js?v=2.3"></script>
+  <script src="views/my-bookings.js?v=2.3"></script>
+  <script src="views/offers.js?v=2.3"></script>
+  <script src="views/support.js?v=2.3"></script>
+  <script src="views/other-services.js?v=2.3"></script>
+  <script src="views/hotel-owner.js?v=2.3"></script>
+  <script src="views/admin-dashboard.js?v=2.3"></script>
+
+  <!-- APPLICATION BOOTSTRAPPER & ROUTE REGISTRATION -->
+  <script src="app.js?v=2.3"></script>
+</body>
 </html>
